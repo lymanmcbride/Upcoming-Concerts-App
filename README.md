@@ -28,7 +28,7 @@ class Concert(models.Model):
         return self.event_name
 ```
 When rendered as a form, this model makes a nice set of entries, with dropdowns for tables linked by foreign keys and a milti-click box for the ManyToManyField. 
-![Concert Model](./img/add_event_snip.png)
+![Concert Model](/img/add_event_snip.jpg)
 
 Understanding how the ManyToManyField works became essential when I tried to display the database results on a template. Initially I was unable to return the pieces programmed on each concert. I discoverd that the ManyToManyField creates another table in the database, holding foreign keys for all of the pieces and concerts on which they are programmed. I had to use a "through" statement in my view function to access them:
 ```python
