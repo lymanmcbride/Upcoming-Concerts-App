@@ -98,7 +98,7 @@ The trickiest aspects of scraping came in when multiple tags were used per line.
 ![Web Scraping Page](/img/scraped_concerts.jpg)
 
 ### Working with an API
-I had a great experience working with Open Opus, a classical music API that gives access to a great database of composers, pieces, and informationa about the eras in which they lived. I used the API to create a search page for the user, in which they could search the linked database for information about specific composers or works they have composed. I also used it to display a short list of popular composers on the side of the page. The final touch was error handling, which I did in simple python try/except statements. My view function is below, which renders the page. 
+I had a great experience working with Open Opus, a classical music API that gives access to a great database of composers, pieces, and information about the eras in which they lived. I used the API to create a search page for the user, in which they could search the linked database for information about specific composers or works they have composed. I also used it to display a short list of popular composers on the side of the page. The final touch was error handling, which I did in simple python try/except statements. My view function is below, which renders the page. 
 ```python
 def open_opus(request):
     composer_data = {}
