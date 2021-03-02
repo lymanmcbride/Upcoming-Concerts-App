@@ -41,7 +41,7 @@ def details(request, pk):
                    'all_pieces': all_pieces})
 ```
 This development also took some tricky looping on the template to find which pieces go with each concert and display them. the end result was a details page that displayed the concert information and program: 
-![Details Page](/img/details.png)
+![Details Page](/img/details.jpg)
 
 ### Web Scraping
 Web Scraping lends itself to my project because many orchestras publish their concert season on their website. They don't have an API and there are no aggregator sites where their season can be found. I decided to scrape the upcoming livestream concerts from the Berlin Philharmonic. Since our framework was Django, I used beautiful soup to accomplish this. 
@@ -90,7 +90,7 @@ def berlin_scrape(request):
 ```
 
 The trickiest aspects of scraping came in when multiple tags were used per line. Sometimes text would be wrapped in *span* tags, followed by *br* tags. Because of the way beautiful soup works these breaks were difficult to sift out. You will find a list comprehension for **artist_entries** that takes care of this problem. There is another way to do it which I left for future users in case the current way stops working. In the end it provided a nice set of concerts to view on the template:
-![Web Scraping Page](/img/scraped_concerts.png)
+![Web Scraping Page](/img/scraped_concerts.jpg)
 
 ### Working with an API
 I had a great experience working with Open Opus, a classical music API that gives access to a great database of composers, pieces, and informationa about the eras in which they lived. I used the API to create a search page for the user, in which they could search the linked database for information about specific composers or works they have composed. I also used it to display a short list of popular composers on the side of the page. The final touch was error handling, which I did in simple python try/except statements. My view function is below, which renders the page. 
@@ -145,4 +145,4 @@ def open_opus(request):
                   {'composer_data': composer_data, 'work_data': work_data,
                    'popular_composers': p_composers, 'success': success})
 ```
-![API page](/img/api_json.png)
+![API page](/img/api_json.jpg)
