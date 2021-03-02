@@ -2,8 +2,13 @@
 2/15-26/2021
 ## Introduction
 This project comprised a two week sprint where I was tasked with building a full scale MVT Web App for tracking something using a database. The three main goals were to create CRUD functionality for the database using Django models, scrape information from another site using beautiful soup, and access an API to display JSON responses.
+
+*Jump to* [Other skills Learned](#other-skills-learned)
 ## Stories
 The app I decided to create was one that could be used to track upcoming concerts that the user might be interested in. I am a classical musician, so the database tables and other stories all centered around classical music concerts. 
+* [Create the Models](#create-the-models)
+* [Web Scraping](#Web-Scraping)
+* [Working with an API](#working-with-an-api)
 ### Create the Models
 The models are the classes that Django uses to migrate information between the browser and the database. I had four models: 
 1. Pieces of Music
@@ -146,3 +151,8 @@ def open_opus(request):
                    'popular_composers': p_composers, 'success': success})
 ```
 ![API page](/img/api_json.jpg)
+
+## Other Skills Learned 
+* **Agile Project Management Protocols** I attended a daily standup, gave an account of my work, and provided input for others' work. We noticed early on that, because our stories were siloed by the nature of the project, we had to make extra efforts to create open channels of communication with our team and utilize each other to build a better application. 
+
+[Page Top](#live-project)
